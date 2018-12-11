@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>ISL Demo</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="chartjs/Chart.bundle.js"></script>
+    <script src="chartjs/moment.js"></script>
+    <script src="scripts/services.js"></script>
+
+    <script src="scripts/mychart.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/doc.js"></script>
+    <script src="scripts/network.js"></script>
+  </head>
+  <body>
+
+    <div id="loginSection">
+      <table>
+        <tr>  <td>username</td> <td><input id="username" type="text" size="4"></td> </tr>
+        <tr>  <td>password</td> <td><input id="password" type="password" size="4"></td> <td><button id="buttonLogin"> login </button></td> </tr>
+      </table>
+    </div>
+    <div id="divToken"><span>&nbsp;token: </span><span id="tokenValue"></span></div>
+    <div id="siteSelectorSection"><br>
+      <span>site: </span>
+      <select id="siteList">
+      </select>
+      <button id="buttonSelectSite"> select site </button>
+      <br>
+    </div>
+    <div id="siteInfoSection">
+      <span id="siteInfoText"></span><br>
+      <span>min delay in seconds: </span><input id="delay" type="number" min="0" max="10" step="1" value="5" size="4"><br>
+      <span id="delayDisplay"></span>
+    </div>
+    <br>
+    <div id="dataSection">
+      <div id="divStatus">
+        <table>
+          <tr>  <td>XHR Request time:</td>        <td id="requestTime"></td>            <td> [ data: </td>  <td id="requestURL"></td>   <td>] </td> </tr>
+          <tr>  <td>(sent - request) time:</td>   <td id="deltaSentRequestTime"></td>   </tr>
+          <tr>  <td>XHR Sent time:</td>           <td id="sentTime"></td>               <td> [ data: </td>  <td id="sentURL"></td>      <td>] </td> </tr>
+          <tr>  <td>(last sent - sent) time:</td> <td id="deltaSentTimes"></td>         </tr>
+          <tr>  <td>Last XHR Sent time:</td>      <td id="lastSentTime"></td>           <td> [ data: </td>  <td id="lastSentURL"></td>  <td>] </td> </tr>
+          <tr>  <td>------------------------</td> </tr>
+          <tr>  <td>Server response time:</td>    <td id="serverDelayTime"></td>        <td> ( time: </td>  <td id="serverTime"></td> <td>) </td> </tr>
+        </table>
+      </div>
+      <br>
+      <div id="divDateButtons">
+        <button id="buttonPrevDay"> << </button> | <button id="buttonToday"> Reload </button> | <button id="buttonNextDay"> >> </button> | <span id="dateDisplay"></span> <br>
+        <button id="buttonScaleDown"> scale data down 0.1x </button> | <button id="buttonScaleUp"> scale data up 10x </button> | <span id="scaleDisplay"></span>
+      </div>
+      <br>
+      <div id="divData">
+        raw plotData Here!
+      </div>
+      <div id="divChartContainer">
+        <div id="divChart">
+          <canvas id="chart0" width="600" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
