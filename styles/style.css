@@ -1,0 +1,35 @@
+html {
+  font-size: 1em; /* 16px; */ /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: Calibri, sans-serif;
+}
+
+table td:nth-child(1) {
+  text-align: right;
+}
+
+#divData {
+  color: #0000c0;
+  font-size: 0.875em;
+  background-color: #e0e0e0;
+  height: 150px;
+  overflow: auto;
+}
+
+#divChartContainer {
+  outline: 0.05em solid #0080ff;
+  width: 600px;
+  height: 400px;
+}
+
+#divChart {
+/*  outline: 0.05em solid #0080ff; */
+}
+
+/*
+#chart0 {
+  width: 40vh;
+  height: 30vh;
+  max-height: 60vh;
+  max-width: 100vh;
+}
+*/
